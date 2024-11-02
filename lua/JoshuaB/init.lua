@@ -1,0 +1,5 @@
+print('Hello Joshua')
+require('JoshuaB.remap')
+require('JoshuaB.options')
+require('JoshuaB.autocommands')
+require('JoshuaB.lazy')
