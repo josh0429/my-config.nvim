@@ -38,6 +38,17 @@ return{
             t('\\epsilon'),
         }
     ),
+    s({trig=';ve', snippetType='autosnippet'},
+        {
+            t('\\varepsilon'),
+        }
+    ),
+    s({trig=';l', snippetType='autosnippet'},
+        {
+            t('\\lambda'),
+        }
+
+    ),
     s({trig=';m', snippetType='autosnippet'},
         {
             t('\\mu'),
@@ -77,6 +88,13 @@ return{
     s({trig=';6', snippetType='autosnippet'},
         {
             t('\\partial'),
+        }
+    ),
+
+    -- Equivalences
+    s({trig='==', snippetType='autosnippet'},
+        {
+            t('\\equiv'),
         }
     ),
 
@@ -178,7 +196,7 @@ return{
     ),
 
     -- Exponential
-    s({trig='ee', dscr='e to a power'},
+    s({trig='ee', snippetType='autosnippet'},
         fmta(
             'e^{<>}',
             { i(1, 'x') }
@@ -200,28 +218,52 @@ return{
     ),
     s({trig='int', dscr='LaTeX integral with bounds', snippetType='autosnippet'},
         fmta(
-            '\\int_{<>}^{<>} \\, \\diff <>',
+            '\\int_{<>}^{<>}  \\diff <> \\, ',
             { i(1, '-\\infty'), i(2, '+\\infty'), i(3, 't') }
         ),
         { condition = in_mathzone }
     ),
     s({trig='vint', dscr='Volume integral', snippetType='autosnippet'},
         fmta(
-            '\\int \\, \\diff ^{<>} <>',
+            '\\int \\diff ^{<>}  <> \\, ',
             { i(1, '3'), i(2, 'x') }
         ),
         { condition = in_mathzone }
     ),
+    s({trig='d2x', snippetType='autosnippet'},
+        {t('\\int \\diff ^{2}  x \\, ')},
+        { condition = in_mathzone }
+    ),
+    s({trig='d3x', snippetType='autosnippet'},
+        {t('\\int \\diff ^{3}  x \\, ')},
+        { condition = in_mathzone }
+    ),
+    s({trig='d4x', snippetType='autosnippet'},
+        {t('\\int  \\diff ^{4}  x \\, ')},
+        { condition = in_mathzone }
+    ),
     s({trig='kint', dscr='Fourier integral', snippetType='autosnippet'},
         fmta(
-            '\\int \\, \\frac{\\diff ^{<>} <>}{(2\\pi)^{<>}} ',
+            '\\int  \\frac{\\diff ^{<>} <>}{(2\\pi)^{<>}} \\, ',
             { i(1, '3'), i(2, 'k'), rep(1) }
         ),
         { condition = in_mathzone }
     ),
+    s({trig='d2k', snippetType='autosnippet'},
+        { t('\\int  \\frac{\\diff ^{2} k}{(2\\pi)^{2}} \\, ') },
+        { condition = in_mathzone }
+    ),
+    s({trig='d3k', snippetType='autosnippet'},
+        { t('\\int  \\frac{\\diff ^{3} k}{(2\\pi)^{3}} \\, ') },
+        { condition = in_mathzone }
+    ),
+    s({trig='d4k', snippetType='autosnippet'},
+        { t('\\int  \\frac{\\diff ^{4} k}{(2\\pi)^{4}} \\, ') },
+        { condition = in_mathzone }
+    ),
     s({trig='pint', dscr='Path integral', snippetType='autosnippet'},
         fmta(
-            '\\int \\mathcal{D} <>',
+            '\\int \\mathcal{D} \\, <>',
             { i(1, '\\phi') }
         ),
         { condition = in_mathzone }
@@ -314,53 +356,88 @@ return{
 
 
     -- Math fonts
-    -- Mathcal
-    s({trig='sc', dscr='LaTeX mathcal'},
+    -- Mathcal 
+    s({trig='mc', dscr='LaTeX mathcal'},
         fmta(
             [[ \mathcal{<>} ]],
             { d(1, get_visual) }
         )
     ),
-    s({trig='scD', snippetType='autosnippet'},
+    s({trig='mcD', snippetType='autosnippet'},
         {t('\\mathcal{D}')},
         { condition = in_mathzone }
     ),
-    s({trig='scM', snippetType='autosnippet'},
+    s({trig='mcM', snippetType='autosnippet'},
         {t('\\mathcal{M}')},
         { condition = in_mathzone }
     ),
-    s({trig='scF', snippetType='autosnippet'},
+    s({trig='mcF', snippetType='autosnippet'},
         {t('\\mathcal{F}')},
+        { condition = in_mathzone }
+    ),
+    s({trig='mcL', snippetType='autosnippet'},
+        {t('\\mathcal{L}')},
+        { condition = in_mathzone }
+    ),
+
+    -- Script fonts (needs `mathrsfs` package)
+    s({trig='sc', dscr='LaTeX mathcal'},
+        fmta(
+            [[ \mathscr{<>} ]],
+            { d(1, get_visual) }
+        )
+    ),
+    s({trig='scD', snippetType='autosnippet'},
+        {t('\\mathscr{D}')},
+        { condition = in_mathzone }
+    ),
+    s({trig='scM', snippetType='autosnippet'},
+        {t('\\mathscr{M}')},
+        { condition = in_mathzone }
+    ),
+    s({trig='scF', snippetType='autosnippet'},
+        {t('\\mathscr{F}')},
+        { condition = in_mathzone }
+    ),
+    s({trig='scL', snippetType='autosnippet'},
+        {t('\\mathscr{L}')},
         { condition = in_mathzone }
     ),
 
     -- Math bold text
-    s({trig='mbb', dscr='LaTeX mathbb'},
+    s({trig='mbf', dscr='LaTeX mathbf'},
         fmta(
-            [[ \mathbb{<>} ]],
+            [[ \mathbf{<>} ]],
             { d(1, get_visual) }
         )
     ),
     s({trig='pp', snippetType='autosnippet'},
-        {t('\\mathbb{p}')},
+        {t('\\mathbf{p}')},
         { condition = in_mathzone }
     ),
     s({trig='kk', snippetType='autosnippet'},
-        {t('\\mathbb{k}')},
+        {t('\\mathbf{k}')},
         { condition = in_mathzone }
     ),
     s({trig='xx', snippetType='autosnippet'},
-        {t('\\mathbb{x}')},
+        {t('\\mathbf{x}')},
         { condition = in_mathzone }
     ),
     s({trig='rr', snippetType='autosnippet'},
-        {t('\\mathbb{r}')},
+        {t('\\mathbf{r}')},
         { condition = in_mathzone }
     ),
     -- Mathfrac
     s({trig='mfr', dscr='LaTeX mathfrak'},
         fmta(
             [[ \mathfrak{<>} ]],
+            { d(1, get_visual) }
+        )
+    ),
+    -- Mathbb
+    s({trig='mbb', dscr='LaTeX mathbb'},
+        fmta(
+            [[ \mathbb{<>} ]],
             { d(1, get_visual) }
         )
     ),
@@ -372,7 +449,7 @@ return{
         {t('\\quad \\Rightarrow \\quad')},
         {condition = in_mathzone }
     ),
-    s({trig='rig'}, 
+    s({trig='->', snippetType='autosnippet'}, 
         {t('\\rightarrow')},
         {condition = in_mathzone }
     ),

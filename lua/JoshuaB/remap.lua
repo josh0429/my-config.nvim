@@ -40,3 +40,7 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 -- Explorer
 vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
+
+-- Open/close quickfix
+vim.keymap.set('n', '<leader>q', vim.cmd.copen, { desc = 'Open [q]uickfix' })
+vim.keymap.set('n', '<leader>Q', vim.cmd.ccl, { desc = 'Close [Q]uickfix' })
