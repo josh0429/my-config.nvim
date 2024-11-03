@@ -124,6 +124,12 @@ return{
                 { i(1) }
             )
     ),
+    s({trig='lab', dscr='Labels'},
+            fmta(
+                '\\label{<>}',
+                { i(1) }
+            )
+    ),
 
     -- Citing references
     s({trig='cite', dscr='Cite references'},
@@ -144,12 +150,12 @@ return{
             { i(1, 'Section title') }
         )
     ),
-    s({trig='ssec', dscr='LaTeX subsection'},
+    s({trig='ss', dscr='LaTeX subsection'},
         fmta('\\subsection{<>}',
             { i(1, 'Subsection title') }
         )
     ),
-    s({trig='sssec', dscr='LaTeX subsubsection'},
+    s({trig='sss', dscr='LaTeX subsubsection'},
         fmta('\\subsubsection{<>}',
             { i(1, 'Subsubsection title') }
         )
