@@ -50,6 +50,7 @@ return{
       -- Lazy-load snippets (only load snippets for a given filetype)
       require('luasnip.loaders.from_lua').load({paths = '~/.config/nvim/lua/JoshuaB/LuaSnip/'})
 
+      -- Autocomplete configuration
       cmp.setup {
         snippet = {
           expand = function(args)
@@ -108,8 +109,6 @@ return{
             end
           end, { 'i', 's' }),
 
-          -- For more advanced Luasnip keymaps (e.g. selecting choice nodes, expansion) see:
-          --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
         },
         sources = {
           {
