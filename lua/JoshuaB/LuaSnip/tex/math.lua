@@ -53,17 +53,20 @@ return{
             t('\\varepsilon'),
         }
     ),
+    s({trig=';k', snippetType='autosnippet'},
+        {
+            t('\\kappa'),
+        }
+    ),
     s({trig=';l', snippetType='autosnippet'},
         {
             t('\\lambda'),
         }
-
     ),
     s({trig=';m', snippetType='autosnippet'},
         {
             t('\\mu'),
         }
-
     ),
     s({trig=';n', snippetType='autosnippet'},
         {
@@ -75,14 +78,29 @@ return{
             t('\\omega'),
         }
     ),
-    s({trig=';p', snippetType='autosnippet'},
+    s({trig=';O', snippetType='autosnippet'},
+        {
+            t('\\Omega'),
+        }
+    ),
+    s({trig=';ph', snippetType='autosnippet'},
         {
             t('\\phi'),
         }
     ),
-    s({trig=';vp', snippetType='autosnippet'},
+    s({trig=';Ph', snippetType='autosnippet'},
+        {
+            t('\\Phi'),
+        }
+    ),
+    s({trig=';vph', snippetType='autosnippet'},
         {
             t('\\varphi'),
+        }
+    ),
+    s({trig=';ps', snippetType='autosnippet'},
+        {
+            t('\\psi'),
         }
     ),
     s({trig=';r', snippetType='autosnippet'},
@@ -110,9 +128,24 @@ return{
             t('\\tau'),
         }
     ),
+    s({trig=';u', snippetType='autosnippet'},
+        {
+            t('\\eta'),
+        }
+    ),
+    s({trig=';U', snippetType='autosnippet'},
+        {
+            t('\\Upsilon'),
+        }
+    ),
     s({trig=';x', snippetType='autosnippet'},
         {
             t('\\xi'),
+        }
+    ),
+    s({trig=';X', snippetType='autosnippet'},
+        {
+            t('\\Xi'),
         }
     ),
     s({trig=';z', snippetType='autosnippet'},
