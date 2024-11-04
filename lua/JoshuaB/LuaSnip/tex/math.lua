@@ -28,9 +28,19 @@ return{
             t('\\gamma'),
         }
     ),
+    s({trig=';G', snippetType='autosnippet'},
+        {
+            t('\\Gamma'),
+        }
+    ),
     s({trig=';d', snippetType='autosnippet'},
         {
             t('\\delta'),
+        }
+    ),
+    s({trig=';D', snippetType='autosnippet'},
+        {
+            t('\\Delta'),
         }
     ),
     s({trig=';e', snippetType='autosnippet'},
@@ -60,6 +70,21 @@ return{
             t('\\nu'),
         }
     ),
+    s({trig=';o', snippetType='autosnippet'},
+        {
+            t('\\omega'),
+        }
+    ),
+    s({trig=';p', snippetType='autosnippet'},
+        {
+            t('\\phi'),
+        }
+    ),
+    s({trig=';vp', snippetType='autosnippet'},
+        {
+            t('\\varphi'),
+        }
+    ),
     s({trig=';r', snippetType='autosnippet'},
         {
             t('\\rho'),
@@ -68,6 +93,21 @@ return{
     s({trig=';s', snippetType='autosnippet'},
         {
             t('\\sigma'),
+        }
+    ),
+    s({trig=';th', snippetType='autosnippet'},
+        {
+            t('\\theta'),
+        }
+    ),
+    s({trig=';Th', snippetType='autosnippet'},
+        {
+            t('\\Theta'),
+        }
+    ),
+    s({trig=';ta', snippetType='autosnippet'},
+        {
+            t('\\tau'),
         }
     ),
     s({trig=';x', snippetType='autosnippet'},
