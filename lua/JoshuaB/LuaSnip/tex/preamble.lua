@@ -4,8 +4,14 @@ return{
             [[
                 \documentclass[<>]{subfiles}
                 \graphicspath{{\subfix{<>}}}
+
+                \begin{document}
+
+                    <>
+
+                \end{document}
             ]],
-            { i(1, '../main.tex'), i(2, '../images/') }
+            { i(1, '../main.tex'), i(2, '../images/'), i(3) }
         )
     )
 }
