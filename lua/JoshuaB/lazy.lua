@@ -17,9 +17,9 @@ require('lazy').setup({
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
   -- keys can be used to configure plugin behavior/loading/etc.
-  --
-  -- Use `opts = {}` to force a plugin to be loaded.
-  --
+
+  -- Oil
+  require('JoshuaB.plugins.oil'),
 
   --lualine
   require('JoshuaB.plugins.lualine'),

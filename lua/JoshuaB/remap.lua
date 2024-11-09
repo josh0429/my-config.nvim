@@ -38,8 +38,8 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
--- Explorer
-vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
+-- NetRW Explorer (oil.nvim is better)
+-- vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
 
 -- Open/close quickfix
 vim.keymap.set('n', '<leader>q', vim.cmd.copen, { desc = 'Open [q]uickfix' })
@@ -65,7 +65,6 @@ local untrigger = function()
   vim.fn.setpos(".", { 0, node_from[1] + 1, node_from[2] + 1 + string.len(trig) })
 end
 
-
 vim.keymap.set({ "i", "s" }, "<c-x>", function()
   if require("luasnip").in_snippet() then
     untrigger()
@@ -75,3 +74,5 @@ end, {
   desc = "Undo a snippet",
 })
 
+--Oil
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" } )
