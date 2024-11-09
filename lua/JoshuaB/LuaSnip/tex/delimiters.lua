@@ -41,6 +41,13 @@ return{
         ),
         { condition = in_mathzone }
     ),
+    s({trig='||', snippetType='autosnippet'},
+        fmta(
+            "\\left | <> \\right |",
+            { i(1) }
+        ),
+        { condition = in_mathzone }
+    ),
     -- bigg variants
     s({trig="b(", snippetType='autosnippet'},
         fmta(

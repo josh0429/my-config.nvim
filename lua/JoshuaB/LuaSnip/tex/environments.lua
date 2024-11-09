@@ -77,6 +77,58 @@ return{
             { i(1, 'h'), i(2, '0.5'), i(3, '\\linewidth'), i(4), i(5), i(6) }
         )
     ),
+    s({trig='bsfig2', dscr='A LaTeX figure environment with two subfigures'},
+        fmta(
+            [[
+                \begin{figure}
+                    \centering
+                    \begin{subfigure}[h]{0.45\textwidth}
+                        \centering
+                        \includegraphics[width=\textwidth]{<>}
+                        \caption{<>}
+                    \end{subfigure}
+                    \hfill
+                    \begin{subfigure}[h]{0.45\textwidth}
+                        \centering
+                        \includegraphics[width=\textwidth]{<>}
+                        \caption{<>}
+                    \end{subfigure}
+                    \caption{<>}
+                    \label{fig:<>}
+                \end{figure}
+            ]],
+            { i(1), i(2), i(3), i(4), i(5), i(6) }
+        )
+    ),
+    s({trig='bsfig3', dscr='A LaTeX figure environment with three subfigures'},
+        fmta(
+            [[
+                \begin{figure}
+                    \centering
+                    \begin{subfigure}[h]{0.3\textwidth}
+                        \centering
+                        \includegraphics[width=\textwidth]{<>}
+                        \caption{<>}
+                    \end{subfigure}
+                    \hfill
+                    \begin{subfigure}[h]{0.3\textwidth}
+                        \centering
+                        \includegraphics[width=\textwidth]{<>}
+                        \caption{<>}
+                    \end{subfigure}
+                    \hfill
+                    \begin{subfigure}[h]{0.3\textwidth}
+                        \centering
+                        \includegraphics[width=\textwidth]{<>}
+                        \caption{<>}
+                    \end{subfigure}
+                    \caption{<>}
+                    \label{fig:<>}
+                \end{figure}
+            ]],
+            { i(1), i(2), i(3), i(4), i(5), i(6), i(7), i(8) }
+        )
+    ),
 
     -- Tables
     -- I'd rather use an online table maker
