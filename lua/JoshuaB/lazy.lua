@@ -37,6 +37,9 @@ require('lazy').setup({
   -- telescope
   require('JoshuaB.plugins.telescope'),
 
+  --telescope-luasnip
+  require('JoshuaB.plugins.telescope-luasnip'),
+
   -- vimtex
   require('JoshuaB.plugins.vimtex'),
 
@@ -58,8 +61,8 @@ require('lazy').setup({
   -- treesitter
   require('JoshuaB.plugins.treesitter'),
 
-  -- harpoon
-  require('JoshuaB.plugins.harpoon'),
+  -- arrow
+  require('JoshuaB.plugins.arrow'),
 
 }, {
   ui = {

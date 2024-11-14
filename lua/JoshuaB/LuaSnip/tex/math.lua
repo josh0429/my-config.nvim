@@ -13,7 +13,8 @@ end
 
 return{
     -- Greek letter snippets, autotriggered
-    s({trig=';a', snippetType='autosnippet'},
+    -- TODO: add descriptions to all snippets
+    s({trig=';a', snippetType='autosnippet', dscr='Lowercase alpha'},
         {
             t('\\alpha'),
         },

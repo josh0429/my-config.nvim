@@ -38,6 +38,9 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+-- Paste from clipboard
+vim.keymap.set('n', '<leader>p', [["*p]], {desc = 'Paste from system clipboard' } )
+
 -- NetRW Explorer (oil.nvim is better)
 -- vim.keymap.set('n', '<leader>pv', vim.cmd.Ex)
 
