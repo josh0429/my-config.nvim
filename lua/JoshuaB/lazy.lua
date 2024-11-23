@@ -24,6 +24,9 @@ require('lazy').setup({
   --lualine
   require('JoshuaB.plugins.lualine'),
 
+  -- vim-matchup
+  require('JoshuaB.plugins.vim-matchup'),
+
   -- gitsigns
   -- See `:help gitsigns` to understand what the configuration keys do
   require('JoshuaB.plugins.gitsigns'),
@@ -37,8 +40,11 @@ require('lazy').setup({
   -- telescope
   require('JoshuaB.plugins.telescope'),
 
-  --telescope-luasnip
+  -- telescope-luasnip
   require('JoshuaB.plugins.telescope-luasnip'),
+
+  -- telescope-bibtex
+  require('JoshuaB.plugins.telescope-bibtex'),
 
   -- vimtex
   require('JoshuaB.plugins.vimtex'),
@@ -50,7 +56,7 @@ require('lazy').setup({
   require('JoshuaB.plugins.cmp'),
 
   -- Colorscheme
-  require('JoshuaB.plugins.tokyonight'),
+  require('JoshuaB.plugins.catppuccin'),
 
   -- Highlight todo, notes, etc in comments
   require('JoshuaB.plugins.todo-comments'),

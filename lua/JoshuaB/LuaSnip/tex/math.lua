@@ -543,7 +543,7 @@ return{
     -- Sqrt
     s({trig='sq', dscr='LaTeX sqrt', snippetType='autosnippet'},
         fmta(
-            [[ \sqrt{<>} ]],
+            [[\sqrt{<>}]],
             { i(1) }
         ),
         { condition = in_mathzone }

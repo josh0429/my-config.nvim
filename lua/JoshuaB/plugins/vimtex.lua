@@ -6,6 +6,7 @@ return{
     init = function()
       -- VimTeX configuration goes here, e.g.
       vim.g.vimtex_view_method = 'skim'
+      vim.g.vimtex_view_skim_activate = 0
     end,
   }
 }
