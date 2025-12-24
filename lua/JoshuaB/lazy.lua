@@ -70,6 +70,9 @@ require('lazy').setup({
   -- arrow
   require('JoshuaB.plugins.arrow'),
 
+  -- typst-preview
+  require('JoshuaB.plugins.typst-preview'),
+
 }, {
   ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the

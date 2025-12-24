@@ -195,6 +195,14 @@ return{
             },
           },
         },
+        -- typst
+        tinymist = {
+          settings = {
+            formatterMode = 'typstyle',
+            exportPDF = 'onSave',
+            semanticTokens = 'disable'
+          }
+        }
       }
 
       -- Ensure the servers and tools above are installed

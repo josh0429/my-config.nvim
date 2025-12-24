@@ -40,4 +40,34 @@ return{
 
 -- TODO: Book template
 
+-- Minimal article template
+    s({trig='note', dscr='Minimal working article'},
+        fmta(
+            [[
+                \documentclass{article}
+                % General document formatting
+                \usepackage[margin=0.7in]{geometry}
+                \usepackage[parfill]{parskip}
+                \usepackage[utf8]{inputenc}
+                \usepackage{geometry, bbold, mathrsfs, tikz, amssymb, amsmath, slashed, caption, subcaption, graphicx, dsfont, braket}
+
+                \numberwithin{equation}{section}
+
+                % Macros
+                % Macro for differential d
+                \newcommand{\diff}{\ensuremath{\operatorname{d}\!}}
+
+                \begin{document}
+                \title{<> \\\large <>}
+                \author{Joshua Bautista}
+
+                \maketitle
+
+                \section{Part a}
+
+                \end{document}
+            ]],
+            {i(1, 'Sample title'), i(2, 'filename')}
+        )
+    ),
 }

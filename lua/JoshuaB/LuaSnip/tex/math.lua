@@ -240,7 +240,7 @@ return{
     ),
     s({trig='bar', dscr='Bar over symbol'},
         fmta(
-            '\\bar{<>}',
+            '\\overline{<>}',
             { i(1) }
         ),
         { condition = in_mathzone }
@@ -453,10 +453,17 @@ return{
         { condition = in_mathzone }
     ),
 
-    -- Trigonometric functions
+    -- Trigonometric functions/Hyperbolic functions
     s({trig='cos', dscr='LaTeX cosine function'},
         fmta(
             '\\cos \\left( <> \\right)',
+            { i(1, 'x') }
+        ),
+        { condition = in_mathzone }
+    ),
+    s({trig='hcos', dscr='LaTeX cosh function'},
+        fmta(
+            '\\cosh \\left( <> \\right)',
             { i(1, 'x') }
         ),
         { condition = in_mathzone }
@@ -468,9 +475,23 @@ return{
         ),
         { condition = in_mathzone }
     ),
+    s({trig='hcos2', dscr='Squared cosh'},
+        fmta(
+            '\\cosh ^2 \\left( <> \\right)',
+            { i(1, 'x') }
+        ),
+        { condition = in_mathzone }
+    ),
     s({trig='sin', dscr='LaTeX sine function'},
         fmta(
             '\\sin \\left( <> \\right)',
+            { i(1, 'x') }
+        ),
+        { condition = in_mathzone }
+    ),
+    s({trig='hsin', dscr='LaTeX sinh function'},
+        fmta(
+            '\\sinh \\left( <> \\right)',
             { i(1, 'x') }
         ),
         { condition = in_mathzone }
@@ -482,9 +503,23 @@ return{
         ),
         { condition = in_mathzone }
     ),
+    s({trig='hsin2', dscr='Squared sinh'},
+        fmta(
+            '\\sinh ^2 \\left( <> \\right)',
+            { i(1, 'x') }
+        ),
+        { condition = in_mathzone }
+    ),
     s({trig='tan', dscr='LaTeX tangent function'},
         fmta(
             '\\tan \\left( <> \\right)',
+            { i(1, 'x') }
+        ),
+        { condition = in_mathzone }
+    ),
+    s({trig='htan', dscr='LaTeX tanh function'},
+        fmta(
+            '\\tanh \\left( <> \\right)',
             { i(1, 'x') }
         ),
         { condition = in_mathzone }
@@ -496,9 +531,23 @@ return{
         ),
         { condition = in_mathzone }
     ),
+    s({trig='htan2', dscr='Squared tanh'},
+        fmta(
+            '\\tanh ^2 \\left( <> \\right)',
+            { i(1, 'x') }
+        ),
+        { condition = in_mathzone }
+    ),
     s({trig='csc', dscr='LaTeX cosecant function'},
         fmta(
             '\\csc \\left( <> \\right)',
+            { i(1, 'x') }
+        ),
+        { condition = in_mathzone }
+    ),
+    s({trig='hcsc', dscr='LaTeX csch function'},
+        fmta(
+            '\\csch \\left( <> \\right)',
             { i(1, 'x') }
         ),
         { condition = in_mathzone }
@@ -510,9 +559,23 @@ return{
         ),
         { condition = in_mathzone }
     ),
+    s({trig='hcsc2', dscr='Squared csch'},
+        fmta(
+            '\\csch ^2 \\left( <> \\right)',
+            { i(1, 'x') }
+        ),
+        { condition = in_mathzone }
+    ),
     s({trig='secf', dscr='LaTeX secant function'},
         fmta(
             '\\sec \\left( <> \\right)',
+            { i(1, 'x') }
+        ),
+        { condition = in_mathzone }
+    ),
+    s({trig='hsecf', dscr='LaTeX sech function'},
+        fmta(
+            '\\sech \\left( <> \\right)',
             { i(1, 'x') }
         ),
         { condition = in_mathzone }
@@ -524,6 +587,13 @@ return{
         ),
         { condition = in_mathzone }
     ),
+    s({trig='hsecf2', dscr='Squared sech'},
+        fmta(
+            '\\sech ^2 \\left( <> \\right)',
+            { i(1, 'x') }
+        ),
+        { condition = in_mathzone }
+    ),
     s({trig='cot', dscr='LaTeX cotangent function'},
         fmta(
             '\\cot \\left( <> \\right)',
@@ -531,9 +601,23 @@ return{
         ),
         { condition = in_mathzone }
     ),
+    s({trig='hcot', dscr='LaTeX coth function'},
+        fmta(
+            '\\coth \\left( <> \\right)',
+            { i(1, 'x') }
+        ),
+        { condition = in_mathzone }
+    ),
     s({trig='cot2', dscr='Squared cotangent'},
         fmta(
             '\\cot ^2 \\left( <> \\right)',
+            { i(1, 'x') }
+        ),
+        { condition = in_mathzone }
+    ),
+    s({trig='hcot2', dscr='Squared coth'},
+        fmta(
+            '\\coth ^2 \\left( <> \\right)',
             { i(1, 'x') }
         ),
         { condition = in_mathzone }
