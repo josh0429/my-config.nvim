@@ -202,7 +202,9 @@ return{
             exportPDF = 'onSave',
             semanticTokens = 'disable'
           }
-        }
+        },
+        -- CSS
+        tailwindcss = {}
       }
 
       -- Ensure the servers and tools above are installed

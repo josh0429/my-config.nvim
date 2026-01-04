@@ -75,7 +75,7 @@ return{
             -- Try to match the filetype by default, or use 'plain'
             format = '',
             -- Path to global bibliographies (placed outside of the project)
-            global_files = {'~/Library/texmf/bibtex/bib/references.bib'},
+            -- global_files = {'~/Library/texmf/bibtex/bib/references.bib'},
             -- Define the search keys to use in the picker
             search_keys = { 'author', 'year', 'title', 'keywords' },
             -- Template for the formatted citation
@@ -138,11 +138,21 @@ return{
         builtin.find_files { cwd = vim.fn.stdpath 'config' }
       end, { desc = '[S]earch [N]eovim files' })
 
+      -- Shortcut for searching your hyprland configuration files
+      vim.keymap.set('n', '<leader>sy', function()
+        builtin.find_files { cwd = '~/.config/hypr/' }
+      end, { desc = '[S]earch H[y]prland files' })
+
       -- Shortcut for searching your luasnip snippets
       vim.keymap.set('n', '<leader>sl', '<cmd>Telescope luasnip<CR>', {desc = '[S]earch [L]uasnip snippets' })
 
       -- Shortcut for searching and citing bibtex
       vim.keymap.set('n', '<leader>sb', '<cmd>Telescope bibtex<CR>', {desc = '[S]earch [B]ibtex' })
+
+      -- Shortcut for searching your PhD writeups
+      vim.keymap.set('n', '<leader>sp', function()
+        builtin.find_files { cwd = '~/PhD/typesetting/' }
+      end, { desc = '[S]earch [P]hD writeups' })
     end,
   }
 }
